@@ -22,7 +22,7 @@ def load_wind_data_new():
     m = np.ndarray.max(rows)
     print("Maximum value of wind", m)
     print(shape(rows))
-    for x in range(20):
+    for x in range(5):
         train = rows[:736128, x].reshape(-1, 576)
         train = train / 16
 
