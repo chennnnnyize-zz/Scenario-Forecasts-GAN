@@ -53,7 +53,7 @@ def load_wind_data_new():
     teX = teX.reshape([-1, 576])
     teY=trY[index[23560:]]
 
-    '''csvfile = file('trainingX.csv', 'wb')
+    csvfile = file('trainingX.csv', 'wb')
     writer = csv.writer(csvfile)
     samples = np.array(trX2*16, dtype=float)
     writer.writerows(samples.reshape([-1, 576]))
@@ -71,7 +71,7 @@ def load_wind_data_new():
     csvfile = file('testingY.csv', 'wb')
     writer = csv.writer(csvfile)
     samples = np.array(teY, dtype=float)
-    writer.writerows(samples)'''
+    writer.writerows(samples)
 
     with open('data/forecast data/24_hour_ahead_full.csv', 'r') as csvfile:
         reader = csv.reader(csvfile)
@@ -99,63 +99,6 @@ def load_wind_data_new():
 
 
 
-
-def load_wind_data4():
-    with open('power789.csv', 'r') as csvfile:
-        reader = csv.reader(csvfile)
-        rows = [row for row in reader]
-    rows = np.array(rows, dtype=float)
-    trX = []
-    i=0
-    m = np.ndarray.max(rows)
-    print("Maximum value of wind", m)
-    for x in range(34):
-        train = rows[:104832, x].reshape(-1, 576)
-        train = train / 16
-
-        # print(shape(train))
-        if trX == []:
-            trX = train
-        else:
-            trX = np.concatenate((trX, train), axis=0)
-    print("Shape TrX",shape(trX))
-    return trX, m
-
-
-def load_wind_data_large():
-    #data created on July 8th, WA 66 wind farms
-    with open('../new.csv', 'r') as csvfile:
-        reader = csv.reader(csvfile)
-        rows = [row for row in reader]
-    rows = np.array(rows, dtype=float)
-    trX = []
-    print(shape(rows))
-    m = np.ndarray.max(rows)
-    print("Maximum value of wind", m)
-    print(shape(rows))
-    for x in range(52):
-        train = rows[:104832, x].reshape(-1, 576)
-        train = train / 16
-
-        # print(shape(train))
-        if trX == []:
-            trX = train
-        else:
-            trX = np.concatenate((trX, train), axis=0)
-    print("Shape TrX", shape(trX))
-
-    with open('../sample label.csv', 'r') as csvfile:
-        reader = csv.reader(csvfile)
-        rows = [row for row in reader]
-    label = np.array(rows, dtype=int)
-    label=label.T[0:9464]
-    csvfile = file('wind_label.csv', 'wb')
-    writer = csv.writer(csvfile)
-    writer.writerows(label)
-    print("Label shape", shape(label))
-    return trX, label
-
-
 def load_wind_data_spatial():
     with open('spatial.csv', 'r') as csvfile:
         reader = csv.reader(csvfile)
@@ -165,9 +108,6 @@ def load_wind_data_spatial():
     print("Maximum value of wind", m)
     rows=rows/16
     return rows
-
-
-
 
 
 def load_wind_mask():
