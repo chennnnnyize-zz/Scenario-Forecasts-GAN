@@ -1,5 +1,5 @@
 # Scenario-Forecasts-GAN
-Research code for the paper "Unsupervised Deep Learning Approach for Scenario Forecasts" accepted to Power Systems Computation Conference (PSCC) 2018, which is also free to download on ArXiv:
+Research code for the paper "Unsupervised Deep Learning Approach for Scenario Forecasts" accepted to Power Systems Computation Conference (PSCC) 2018, which is also free to view on ArXiv:
 https://arxiv.org/pdf/1711.02247.pdf
 
 Authors: Yize Chen, Xiyu Wang and Baosen Zhang
@@ -13,3 +13,6 @@ We combine the Generative Adversarial Networks (GAN) for scenario generation, as
 
 ## Contact
 For more information about code and methods, please feel free to contact Yize Chen: yizechen@uw.edu
+
+## Note 
+There is a Github limit on the size of data. I haven't uploaded the forecast data. If you have any inquires on that particular dataset, please feel free to ask me. 
