@@ -16,3 +16,5 @@ For more information about code and methods, please feel free to contact Yize Ch
 
 ## Note 
 There is a Github limit on the size of data. I haven't uploaded the forecast data. If you have any inquires on that particular dataset, please feel free to ask me. 
+
+(Update December, 2019) I have included my processed original dataset and forecast data compatible with the code in this repo in google drive. You can download the [original data](https://drive.google.com/open?id=1SllFSTUJ6b713fYNtNzyKGzNvxQbTTyV)and [forecast data](https://drive.google.com/open?id=0Bx70PAbwbvfSclpvNjZRUFNjYk0).
